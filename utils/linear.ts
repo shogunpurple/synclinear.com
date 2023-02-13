@@ -290,7 +290,7 @@ export const saveLinearContext = async (token: string, team: LinearTeam) => {
         publicLabelId: labels.find(n => n.name === "Public")?.id,
         canceledStateId: labels.find(n => n.name === "Canceled")?.id,
         doneStateId: labels.find(n => n.name === "Done")?.id,
-        toDoStateId: labels.find(n => n.name === "Todo")?.id
+        toDoStateId: labels.find(n => n.name === "Backlog")?.id
     };
 
     const response = await fetch("/api/linear/save", {
